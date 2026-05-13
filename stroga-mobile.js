@@ -1375,10 +1375,12 @@ an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers)
 					sRatio = Math.min(xRatio, yRatio);				
 			}				
 			else if(scaleType==1) {					
-				sRatio = Math.min(xRatio, yRatio);				
+	sRatio = Math.max(xRatio, yRatio);				
+}			
 			}				
 			else if(scaleType==2) {					
-				sRatio = Math.max(xRatio, yRatio);				
+	sRatio = Math.min(xRatio, yRatio);				
+}				
 			}			
 		}
 		domContainers[0].width = w * pRatio * sRatio;			
