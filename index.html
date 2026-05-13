@@ -10,6 +10,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
 <title>stroga-mobile</title>
 <!-- write your code here -->
@@ -59,9 +60,20 @@ function handleComplete(evt,comp) {
 </script>
 <!-- write your code here -->
 </head>
-<body onload="init();" style="margin:0px;">
+<body onload="init();" style="margin:0; overflow:hidden; touch-action:none; background:#000;">
 	<div id="animation_container" style="background-color:rgba(153, 204, 255, 1.00); width:450px; height:800px">
-		<canvas id="canvas" width="450" height="800" style="position: absolute; display: block; background-color:rgba(153, 204, 255, 1.00);"></canvas>
+		<canvas 
+    id="canvas" 
+    width="450" 
+    height="800" 
+    style="
+        position:absolute;
+        width:100%;
+        height:100%;
+        display:block;
+        background-color:rgba(153, 204, 255, 1.00);
+    ">
+</canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:450px; height:800px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
@@ -70,8 +82,8 @@ function handleComplete(evt,comp) {
 <!-- ===================== -->
 <div id="uiOverlay" style="
     position:absolute;
-    width:450px;
-    height:800px;
+    width:100vw;
+    height:100vh;
     top:0;
     left:0;
     pointer-events:none;
